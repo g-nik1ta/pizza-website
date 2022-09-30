@@ -1,0 +1,28 @@
+@import 'config';
+@import 'navigation';
+@import 'header';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: url(../images/backgrounds/bg_4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    .container {
+        width: 100%;
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+}

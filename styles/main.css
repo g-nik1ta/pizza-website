@@ -230,6 +230,82 @@ header .controls .btn-control-active::after {
   background-color: rgb(255, 255, 255);
 }
 
+.intro {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+.intro .info {
+  flex-grow: 6;
+  background-color: #000;
+  padding: 30px;
+  display: flex;
+  justify-content: right;
+}
+.intro .info .box-items {
+  height: 100%;
+  display: flex;
+}
+.intro .info .box-items .item {
+  margin-left: 25px;
+  color: #fff;
+  max-width: 220px;
+  padding-left: 25px;
+}
+.intro .info .box-items .item h3 {
+  line-height: 1.8;
+  font-size: 17px;
+  font-family: JosefinSans-Light;
+  position: relative;
+}
+.intro .info .box-items .item h3::before {
+  font-family: "Font Awesome 5 Free";
+  color: #fac564;
+  font-size: 16px;
+  position: absolute;
+  left: -35px;
+  top: -3px;
+}
+.intro .info .box-items .item p {
+  font-size: 17px;
+  color: grey;
+  line-height: 1.5;
+  font-family: JosefinSans-Light;
+}
+.intro .info .box-items .item:nth-of-type(1) h3::before {
+  content: "\f095";
+}
+.intro .info .box-items .item:nth-of-type(2) h3::before {
+  content: "\f3c5";
+}
+.intro .info .box-items .item:nth-of-type(3) h3::before {
+  content: "\f017";
+}
+.intro .social {
+  flex-grow: 1;
+  width: 33%;
+  background-color: #fac564;
+  padding: 24px 48px;
+}
+.intro .social .box-social {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.intro .social .box-social a {
+  transition: all 0.65s ease-in-out;
+  color: #fff;
+}
+.intro .social .box-social a i {
+  padding: 0 12px;
+  font-size: 22px;
+}
+.intro .social .box-social a:hover {
+  transform: scale(1.47);
+  color: rgb(157, 157, 157);
+}
+
 * {
   margin: 0;
   padding: 0;

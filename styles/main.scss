@@ -1,6 +1,7 @@
 @import 'config';
 @import 'navigation';
 @import 'header';
+@import 'aboutShortInfo';
 
 * {
     margin: 0;
@@ -15,6 +16,7 @@ html {
 
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    // font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background: url(../images/backgrounds/bg_4.jpg);
     background-repeat: no-repeat;
     background-size: cover;

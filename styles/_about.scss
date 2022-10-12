@@ -1,0 +1,50 @@
+.about {
+    width: 100%;
+    height: 400px;
+    display: flex;
+
+    .image {
+        height: 100%;
+        width: 50%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+        }
+    }
+
+    .title {
+        width: 50%;
+        padding: 5%;
+        color: #fff;
+        align-self: center;
+
+        h1 {
+            text-transform: uppercase;
+            font-size: 30px;
+            margin-bottom: 24px;
+            font-family: JosefinSans-Light;
+
+            span {
+                color: $colorY;
+
+                &::before {
+                    content: '';
+                    background: url("../images/mycollection/png/001-pizza.png");
+                    display: inline-block;
+                    width: 28px;
+                    height: 28px;
+                    background-size: cover;
+                    background-position: center center;
+                }
+            }
+        }
+
+        p {
+            color: grey;
+            line-height: 1.8;
+            font-size: 15px;
+        }
+    }
+}

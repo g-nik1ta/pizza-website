@@ -1,0 +1,109 @@
+.services {
+    width: 100%;
+    height: 700px;
+    background: url("../images/food.png");
+    padding: 112px 0;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .title {
+            max-width: 650px;
+            margin-bottom: 64px;
+
+            h1 {
+                text-transform: uppercase;
+                font-size: 30px;
+                margin-bottom: 24px;
+                font-family: JosefinSans-Light;
+            }
+
+            p {
+                color: #845c10;
+            }
+        }
+
+        .box-services {
+            display: flex;
+            width: 100%;
+            height: 315px;
+
+            .item {
+                width: 100%;
+                max-width: 33%;
+                margin: 0 15px;
+
+                .item-icon {
+                    width: 100px;
+                    height: 100px;
+                    margin: 0 auto 48px;
+                    text-align: center;
+                    position: relative;
+                    z-index: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .svg-img {
+                        width: 60px;
+                        height: 60px;
+                        background-color: #764e04;
+                        transition: all .22s ease-in-out;
+                    }
+
+                    .svg-diet {
+                        mask-image: url("../images/mycollection/png/002-diet.svg");
+                    }
+
+                    .svg-delivery {
+                        mask-image: url("../images/mycollection/png/003-delivery.svg");
+                    }
+
+                    .svg-pizza {
+                        mask-image: url("../images/mycollection/png/004-pizza.svg");
+                    }
+
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        border: 1px solid #bf7e06;
+                        transition: all .22s ease-in-out;
+                        z-index: -1;
+                    }
+                }
+
+                &:hover .item-icon {
+                    &::after {
+                        background-color: #f8b333;
+                        border: 1px solid #f8b333;
+                        transform: rotate(135deg);
+                    }
+
+                    .svg-img {
+                        background-color: rgb(255, 255, 255);
+                    }
+                }
+
+                h3 {
+                    font-size: 18px;
+                    margin-bottom: 20px;
+                    text-transform: uppercase;
+                    font-family: JosefinSans-Light;
+                }
+
+                p {
+                    margin-bottom: 16px;
+                    font-family: JosefinSans-Light;
+                    line-height: 1.8;
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+}

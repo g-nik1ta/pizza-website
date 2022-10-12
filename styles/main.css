@@ -351,6 +351,101 @@ header .controls .btn-control-active::after {
   font-size: 15px;
 }
 
+.services {
+  width: 100%;
+  height: 700px;
+  background: url("../images/food.png");
+  padding: 112px 0;
+}
+.services .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.services .container .title {
+  max-width: 650px;
+  margin-bottom: 64px;
+}
+.services .container .title h1 {
+  text-transform: uppercase;
+  font-size: 30px;
+  margin-bottom: 24px;
+  font-family: JosefinSans-Light;
+}
+.services .container .title p {
+  color: #845c10;
+}
+.services .container .box-services {
+  display: flex;
+  width: 100%;
+  height: 315px;
+}
+.services .container .box-services .item {
+  width: 100%;
+  max-width: 33%;
+  margin: 0 15px;
+}
+.services .container .box-services .item .item-icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 48px;
+  text-align: center;
+  position: relative;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.services .container .box-services .item .item-icon .svg-img {
+  width: 60px;
+  height: 60px;
+  background-color: #764e04;
+  transition: all 0.22s ease-in-out;
+}
+.services .container .box-services .item .item-icon .svg-diet {
+  -webkit-mask-image: url("../images/mycollection/png/002-diet.svg");
+          mask-image: url("../images/mycollection/png/002-diet.svg");
+}
+.services .container .box-services .item .item-icon .svg-delivery {
+  -webkit-mask-image: url("../images/mycollection/png/003-delivery.svg");
+          mask-image: url("../images/mycollection/png/003-delivery.svg");
+}
+.services .container .box-services .item .item-icon .svg-pizza {
+  -webkit-mask-image: url("../images/mycollection/png/004-pizza.svg");
+          mask-image: url("../images/mycollection/png/004-pizza.svg");
+}
+.services .container .box-services .item .item-icon::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #bf7e06;
+  transition: all 0.22s ease-in-out;
+  z-index: -1;
+}
+.services .container .box-services .item:hover .item-icon::after {
+  background-color: #f8b333;
+  border: 1px solid #f8b333;
+  transform: rotate(135deg);
+}
+.services .container .box-services .item:hover .item-icon .svg-img {
+  background-color: rgb(255, 255, 255);
+}
+.services .container .box-services .item h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-family: JosefinSans-Light;
+}
+.services .container .box-services .item p {
+  margin-bottom: 16px;
+  font-family: JosefinSans-Light;
+  line-height: 1.8;
+  font-size: 17px;
+}
+
 * {
   margin: 0;
   padding: 0;

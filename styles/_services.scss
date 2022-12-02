@@ -49,21 +49,23 @@
                     .svg-img {
                         width: 60px;
                         height: 60px;
-                        background-color: #764e04;
+                        background-color: #5c3d03;
                         transition: all .22s ease-in-out;
                     }
 
                     .svg-diet {
-                        mask-image: url("../images/mycollection/png/002-diet.svg");
+                        mask-image: url("../images/mycollection/png/008-diet.svg");
                     }
 
                     .svg-delivery {
-                        mask-image: url("../images/mycollection/png/003-delivery.svg");
+                        mask-image: url("../images/mycollection/png/009-delivery.svg");
                     }
 
                     .svg-pizza {
-                        mask-image: url("../images/mycollection/png/004-pizza.svg");
+                        mask-image: url("../images/mycollection/png/010-pizza.svg");
                     }
+
+                    &:hover {cursor: pointer;}
 
                     &::after {
                         position: absolute;

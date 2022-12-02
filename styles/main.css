@@ -29,32 +29,38 @@ nav .container {
 nav .container .logo {
   width: 90px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
 }
-nav .container .logo img {
-  width: 31px;
-  height: 25px;
-  padding-right: 6px;
-  margin-bottom: 4px;
+nav .container .logo span {
+  font-family: JosefinSans-Regular;
 }
 nav .container .logo span:first-of-type {
-  align-self: center;
-  font-family: JosefinSans-Regular;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  width: 100%;
   color: #fff;
   font-size: 24px;
   text-transform: capitalize;
 }
+nav .container .logo span:first-of-type::before {
+  content: "";
+  display: block;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-image: url("../images/mycollection/png/004-pizza-logo.svg");
+  width: 24px;
+  height: 24px;
+}
 nav .container .logo span:last-of-type {
   color: #fac564;
-  font-family: JosefinSans-Regular;
   text-transform: uppercase;
   font-size: 11px;
   letter-spacing: 4px;
 }
 nav .container .navbar a {
   padding: 24px 20px;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.87);
   text-transform: capitalize;
   font-size: 14px;
 }
@@ -260,12 +266,11 @@ header .controls .btn-control-active::after {
   position: relative;
 }
 .intro .info .box-items .item h3::before {
-  font-family: "Font Awesome 5 Free";
-  color: #fac564;
-  font-size: 16px;
+  content: "";
   position: absolute;
-  left: -35px;
-  top: -3px;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 .intro .info .box-items .item p {
   font-size: 17px;
@@ -274,13 +279,25 @@ header .controls .btn-control-active::after {
   font-family: JosefinSans-Light;
 }
 .intro .info .box-items .item:nth-of-type(1) h3::before {
-  content: "\f095";
+  background-image: url("../images/mycollection/png/001-telephone.svg");
+  width: 18px;
+  height: 18px;
+  top: 4px;
+  left: -35px;
 }
 .intro .info .box-items .item:nth-of-type(2) h3::before {
-  content: "\f3c5";
+  background-image: url("../images/mycollection/png/002-my-location.svg");
+  width: 24px;
+  height: 24px;
+  top: 2px;
+  left: -38px;
 }
 .intro .info .box-items .item:nth-of-type(3) h3::before {
-  content: "\f017";
+  background-image: url("../images/mycollection/png/003-clock.svg");
+  width: 18px;
+  height: 18px;
+  top: 4px;
+  left: -32px;
 }
 .intro .social {
   flex-grow: 1;
@@ -295,15 +312,26 @@ header .controls .btn-control-active::after {
 }
 .intro .social .box-social a {
   transition: all 0.65s ease-in-out;
-  color: #fff;
+  background-color: #fff;
+  width: 24px;
+  height: 24px;
+  margin: 0 12px;
 }
-.intro .social .box-social a i {
-  padding: 0 12px;
-  font-size: 22px;
+.intro .social .box-social a.twitter {
+  -webkit-mask-image: url("../images/mycollection/png/005-twitter.svg");
+          mask-image: url("../images/mycollection/png/005-twitter.svg");
+}
+.intro .social .box-social a.facebook {
+  -webkit-mask-image: url("../images/mycollection/png/006-facebook.svg");
+          mask-image: url("../images/mycollection/png/006-facebook.svg");
+}
+.intro .social .box-social a.instagram {
+  -webkit-mask-image: url("../images/mycollection/png/007-instagram.svg");
+          mask-image: url("../images/mycollection/png/007-instagram.svg");
 }
 .intro .social .box-social a:hover {
   transform: scale(1.47);
-  color: rgb(157, 157, 157);
+  background-color: rgb(157, 157, 157);
 }
 
 .about {
@@ -338,7 +366,7 @@ header .controls .btn-control-active::after {
 }
 .about .title h1 span::before {
   content: "";
-  background: url("../images/mycollection/png/001-pizza.png");
+  background: url("../images/mycollection/png/011-pizza.png");
   display: inline-block;
   width: 28px;
   height: 28px;
@@ -399,20 +427,23 @@ header .controls .btn-control-active::after {
 .services .container .box-services .item .item-icon .svg-img {
   width: 60px;
   height: 60px;
-  background-color: #764e04;
+  background-color: #5c3d03;
   transition: all 0.22s ease-in-out;
 }
 .services .container .box-services .item .item-icon .svg-diet {
-  -webkit-mask-image: url("../images/mycollection/png/002-diet.svg");
-          mask-image: url("../images/mycollection/png/002-diet.svg");
+  -webkit-mask-image: url("../images/mycollection/png/008-diet.svg");
+          mask-image: url("../images/mycollection/png/008-diet.svg");
 }
 .services .container .box-services .item .item-icon .svg-delivery {
-  -webkit-mask-image: url("../images/mycollection/png/003-delivery.svg");
-          mask-image: url("../images/mycollection/png/003-delivery.svg");
+  -webkit-mask-image: url("../images/mycollection/png/009-delivery.svg");
+          mask-image: url("../images/mycollection/png/009-delivery.svg");
 }
 .services .container .box-services .item .item-icon .svg-pizza {
-  -webkit-mask-image: url("../images/mycollection/png/004-pizza.svg");
-          mask-image: url("../images/mycollection/png/004-pizza.svg");
+  -webkit-mask-image: url("../images/mycollection/png/010-pizza.svg");
+          mask-image: url("../images/mycollection/png/010-pizza.svg");
+}
+.services .container .box-services .item .item-icon:hover {
+  cursor: pointer;
 }
 .services .container .box-services .item .item-icon::after {
   position: absolute;

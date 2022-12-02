@@ -1,10 +1,12 @@
-window.addEventListener("load", () => {
-    const btnsControls = document.querySelectorAll(".btn-control");
-    const sliderItems = document.querySelectorAll(".slider-item");
-    let sliderCounter = 1;
+const btnsControls = document.querySelectorAll(".btn-control");
+const sliderItems = document.querySelectorAll(".slider-item");
+let sliderCounter = 1;
+let slider = null;
+const sliderTime = 5000;
 
+window.addEventListener("load", () => {
     btnsControls.forEach(element => {
-        element.addEventListener("click", (e) => {
+        element.addEventListener("click", () => {
             for (let i = 0; i < btnsControls.length; i++) {
                 btnsControls[i].classList.remove('btn-control-active');
                 sliderItems[i].classList.remove('slider-item-active');
@@ -15,32 +17,19 @@ window.addEventListener("load", () => {
             for (let i = 0; i < btnsControls.length; i++) {
                 if (btnsControls[i].classList.contains("btn-control-active")) {
                     nthActiveBtn = i;
+                    sliderCounter = i + 1;
                     break;
                 }
             }
             sliderItems[nthActiveBtn].classList.toggle('slider-item-active');
-            
+
             headerBackground(nthActiveBtn);
-            // if (nthActiveBtn == 2) {
-            //     document.querySelector("header").classList.remove("headerBackgroundSlider");
-            //     document.querySelector("header").classList.add("headerBackgroundSlider3");
-            // } else {
-            //     document.querySelector("header").classList.remove("headerBackgroundSlider3");
-            //     document.querySelector("header").classList.add("headerBackgroundSlider");
-            // }
+            clearInterval(slider);
+            slider = setInterval(sliderFun, sliderTime);
         });
     });
 
-    setInterval(() => {
-        for (let i = 0; i < btnsControls.length; i++) {
-            btnsControls[i].classList.remove('btn-control-active');
-            sliderItems[i].classList.remove('slider-item-active');
-        }
-        btnsControls[sliderCounter].classList.toggle('btn-control-active');
-        sliderItems[sliderCounter].classList.toggle('slider-item-active');
-        headerBackground(sliderCounter);
-        sliderCounter + 1 > sliderItems.length - 1 ? sliderCounter = 0 : sliderCounter++;
-    }, 5000);
+    slider = setInterval(sliderFun, sliderTime);
 });
 
 function headerBackground(value) {
@@ -49,4 +38,15 @@ function headerBackground(value) {
     } else {
         document.querySelector(".headerBackground").classList.remove("headerBackground2");
     }
+}
+
+function sliderFun() {
+    for (let i = 0; i < btnsControls.length; i++) {
+        btnsControls[i].classList.remove('btn-control-active');
+        sliderItems[i].classList.remove('slider-item-active');
+    }
+    btnsControls[sliderCounter].classList.toggle('btn-control-active');
+    sliderItems[sliderCounter].classList.toggle('slider-item-active');
+    headerBackground(sliderCounter);
+    sliderCounter + 1 > sliderItems.length - 1 ? sliderCounter = 0 : sliderCounter++;
 }

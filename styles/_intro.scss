@@ -28,12 +28,11 @@
                     position: relative;
 
                     &::before {
-                        font-family: "Font Awesome 5 Free";
-                        color: $colorY;
-                        font-size: 16px;
+                        content: '';
                         position: absolute;
-                        left: -35px;
-                        top: -3px;
+                        display: block;
+                        background-repeat: no-repeat;
+                        background-size: 100%;
                     }
                 }
 
@@ -44,9 +43,41 @@
                     font-family: JosefinSans-Light;
                 }
 
-                &:nth-of-type(1) {h3 {&::before {content: '\f095';}}}
-                &:nth-of-type(2) {h3 {&::before {content: '\f3c5';}}}
-                &:nth-of-type(3) {h3 {&::before {content: '\f017';}}}
+                &:nth-of-type(1) {
+                    h3 {
+                        &::before {
+                            background-image: url('../images/mycollection/png/001-telephone.svg');
+                            width: 18px;
+                            height: 18px;
+                            top: 4px;
+                            left: -35px;
+                        }
+                    }
+                }
+
+                &:nth-of-type(2) {
+                    h3 {
+                        &::before {
+                            background-image: url('../images/mycollection/png/002-my-location.svg');
+                            width: 24px;
+                            height: 24px;
+                            top: 2px;
+                            left: -38px;
+                        }
+                    }
+                }
+
+                &:nth-of-type(3) {
+                    h3 {
+                        &::before {
+                            background-image: url('../images/mycollection/png/003-clock.svg');
+                            width: 18px;
+                            height: 18px;
+                            top: 4px;
+                            left: -32px;
+                        }
+                    }
+                }
             }
         }
     }
@@ -60,20 +91,30 @@
         .box-social {
             height: 100%;
             display: flex;
-            align-items: center;   
-            
+            align-items: center;
+
             a {
                 transition: all .65s ease-in-out;
-                color: #fff;
+                background-color: #fff;
+                width: 24px;
+                height: 24px;
+                margin: 0 12px;
 
-                i {
-                    padding: 0 12px;
-                    font-size: 22px;
+                &.twitter {
+                    mask-image: url('../images/mycollection/png/005-twitter.svg');
+                }
+
+                &.facebook {
+                    mask-image: url('../images/mycollection/png/006-facebook.svg');
+                }
+
+                &.instagram {
+                    mask-image: url('../images/mycollection/png/007-instagram.svg');
                 }
 
                 &:hover {
                     transform: scale(1.47);
-                    color: rgb(157, 157, 157);
+                    background-color: rgb(157, 157, 157);
                 }
             }
         }
